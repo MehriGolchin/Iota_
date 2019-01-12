@@ -1,0 +1,10 @@
+{
+  "name": "chinwag-storybook",
+  "version": "0.1.0",
+  "description": "Chinwag storybook",
+  "main": "index.js",
+  "repository": "https://github.com/MehdiGolchin/Storybook.git",
+  "author": "mehdigolchin <mehdi.golchin.kharazi@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
