@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@storybook/react": "^4.1.6"
+    "@storybook/react": "^4.1.6",
+    "typescript": "^3.2.2"
   }
 }
