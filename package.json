@@ -8,7 +8,9 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@babel/core": "^7.2.2",
     "@storybook/react": "^4.1.6",
+    "babel-loader": "^8.0.5",
     "typescript": "^3.2.2"
   },
   "dependencies": {
