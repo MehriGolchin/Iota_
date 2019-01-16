@@ -8,13 +8,19 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build:dev": "webpack --env dev --config .webpack/config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/react": "^4.1.6",
     "babel-loader": "^8.0.5",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "@types/react": "^16.7.18",
