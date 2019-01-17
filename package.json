@@ -9,7 +9,8 @@
   "private": false,
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "build:dev": "webpack --env dev --config .webpack/config.js"
+    "build:dev": "webpack --env dev --config .webpack/config.js",
+    "build:prod": "webpack --env prod --config .webpack/config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
