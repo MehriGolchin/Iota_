@@ -1,0 +1,35 @@
+{
+  "name": "chinwag-storybook",
+  "version": "0.1.0",
+  "description": "Chinwag storybook",
+  "main": "index.js",
+  "repository": "https://github.com/MehdiGolchin/Storybook.git",
+  "author": "mehdigolchin <mehdi.golchin.kharazi@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build:dev": "webpack --env dev --config .webpack/config.js",
+    "build:prod": "webpack --env prod --config .webpack/config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@storybook/react": "^4.1.6",
+    "@types/storybook__react": "^4.0.0",
+    "babel-loader": "^8.0.5",
+    "typescript": "^3.2.4",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
