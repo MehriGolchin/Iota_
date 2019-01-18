@@ -2,7 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 
 const config = {
-    entry: './src/index.tsx',
+    entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: 'iota.js'
@@ -10,13 +10,8 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                use: 'babel-loader',
-                exclude: /node_modules/
-            },
-            {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                use: 'babel-loader',
                 exclude: /node_modules/
             }
         ]
