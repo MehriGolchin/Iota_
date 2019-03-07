@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Label, Password, ShowHideButton, Wrapper } from './passwordfield.styles';
+import { Trans, WithTranslation, withTranslation } from 'react-i18next';
 
 export interface PasswordFieldProps {
     readonly title: string;
@@ -10,15 +11,17 @@ export interface PasswordFieldState {
     isShown: boolean;
 }
 
-export class PasswordField extends Component<PasswordFieldProps, PasswordFieldState> {
-    constructor(props: PasswordFieldProps) {
+type LocalizedPasswordFieldProps = PasswordFieldProps & WithTranslation;
+
+class LocalizedPasswordField extends Component<LocalizedPasswordFieldProps, PasswordFieldState> {
+    constructor(props: LocalizedPasswordFieldProps) {
         super(props);
         this.state = {isShown: false};
 
-        this.isShown = this.isShown.bind(this);
+        this.ShowHide = this.ShowHide.bind(this);
     }
 
-    isShown(){
+    ShowHide(){
         this.setState(state => ({
             isShown: !this.state.isShown,
         }));
@@ -26,18 +29,21 @@ export class PasswordField extends Component<PasswordFieldProps, PasswordFieldSt
 
     render() {
         const {title, placeholder} = this.props;
+        const { isShown } = this.state;
         return (
             <Wrapper>
                 <Label>{title}
                     <Password
-                        type={this.state.isShown ? "text" : "password"}
+                        type={isShown ? "text" : "password"}
                         placeholder={placeholder}
                     />
-                    <ShowHideButton onClick={this.isShown}>
-                        |{this.state.isShown ? " HIDE" : " SHOW"}
+                    <ShowHideButton onClick={this.ShowHide}>
+                        | <Trans>Hide</Trans>
                     </ShowHideButton>
                 </Label>
             </Wrapper>
         );
     }
 }
+
+export const PasswordField = withTranslation('translation')(LocalizedPasswordField);

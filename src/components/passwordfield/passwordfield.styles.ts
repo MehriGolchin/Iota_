@@ -8,7 +8,7 @@ export const Label = styled.label`
 export const Password = styled.input`
   display: block;
   line-height: 30px;
-  padding-left: 0.25em;
+  padding-left: 4px;
   font-family: ${(props: any) => props.theme.fontfamily};
   font-size: ${(props: any) => props.theme.inputFontsize};
   color: ${(props: any) => props.theme.labelColor};
