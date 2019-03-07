@@ -21,7 +21,8 @@ const config = {
             '.js',
             '.jsx',
             '.ts',
-            '.tsx'
+            '.tsx',
+            '.json'
         ]
     }
 };
